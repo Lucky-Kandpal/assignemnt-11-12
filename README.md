@@ -29,5 +29,4 @@
 
 ## Assignment Link (Included both Android APK & Demo Video)
 
-https://drive.google.com/drive/folders/13x8hr-n3jarc4m3HZo2ws7JGGPaQ1vtB?usp=sharing
-
+https://drive.google.com/drive/folders/17sBo5scZSwaYbg7IWHJ2Gt8j92Dd29vU?usp=sharing
