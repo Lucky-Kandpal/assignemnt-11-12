@@ -24,10 +24,7 @@ class CustomBottomNavBar extends StatelessWidget {
       child: Stack(
         clipBehavior: Clip.none,
         children: [
-          CustomPaint(
-            size: const Size(double.infinity, 90),
-            painter: BottomBarPainter(),
-          ),
+       
 
           Positioned.fill(
             child: Row(
@@ -78,37 +75,4 @@ class CustomBottomNavBar extends StatelessWidget {
       ),
     );
   }
-}
-class BottomBarPainter extends CustomPainter {
-  @override
-  void paint(Canvas canvas, Size size) {
-    final paint = Paint()
-      ..color = Colors.white
-      ..style = PaintingStyle.fill;
-
-    final path = Path();
-
-    path.moveTo(0, 0);
-    path.lineTo(size.width * 0.33, 0);
-
-    path.quadraticBezierTo(
-        size.width * 0.40, 0, size.width * 0.42, 20);
-    path.arcToPoint(
-      Offset(size.width * 0.58, 20),
-      radius: const Radius.circular(36),
-      clockwise: false,
-    );
-    path.quadraticBezierTo(
-        size.width * 0.60, 0, size.width * 0.67, 0);
-
-    path.lineTo(size.width, 0);
-    path.lineTo(size.width, size.height);
-    path.lineTo(0, size.height);
-
-    canvas.drawShadow(path, Colors.black26, 12, true);
-    canvas.drawPath(path, paint);
-  }
-
-  @override
-  bool shouldRepaint(CustomPainter oldDelegate) => false;
 }
